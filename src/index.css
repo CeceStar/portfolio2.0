@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Raleway:wght@300;400&display=swap");
+
+:root {
+  --headings: "Glass Antiqua", cursive;
+  --regular-text: "Raleway", sans-serif;
+  --yellow: #f6bd60;
+  --linnen: #f7ede2;
+  --pink: #f5cac3;
+  --greenblue: #84a59d;
+  --coral: #f28482;
+}
+
+body {
+  font-family: var(--regular-text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings);
+}

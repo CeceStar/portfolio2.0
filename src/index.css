@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Raleway:wght@300;400&display=swap");
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   --headings: "Glass Antiqua", cursive;
   --regular-text: "Raleway", sans-serif;
   --yellow: #f6bd60;
+  --yellow-transparent: #f6bd60bb;
   --linnen: #f7ede2;
   --pink: #f5cac3;
   --greenblue: #84a59d;
@@ -20,21 +27,57 @@ h3 {
   font-family: var(--headings);
 }
 
+.background-frame {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.background-front {
+  background-image: linear-gradient(
+    -45deg,
+    var(--linnen),
+    var(--yellow-transparent)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -100;
+  height: 100%;
+  width: 100%;
+  border: 20px solid white;
+}
+
+.background-portfolio {
+  background-image: linear-gradient(-45deg, var(--linnen), var(--coral));
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -100;
+  height: 100vh;
+  width: 100vw;
+  border: 20px solid white;
+}
+
 .intro-grid {
   display: grid;
-  grid-template-rows: 10vh 20vh;
-  grid-template-columns: 500px 500px;
+  grid-template-rows: minmax(10vh, 20vh) minmax(30vh, 50vh);
+  grid-template-columns: 500px minmax(400px, 750px);
   padding-top: 25vh;
   width: 80vw;
+  height: 80vh;
   margin: 0 auto;
 }
 
 .intro-heading {
-  grid-area: 1 / 2 / 2 / 2;
+  grid-area: 1 / 2 / 2 / 3;
   align-self: end;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 .intro-text {
   grid-area: 2 / 2 / 3 / 3;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
 .cece-portrait {
@@ -48,8 +91,12 @@ h3 {
   text-align: center;
 }
 @keyframes spin {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .raydiv {
   position: relative;
@@ -57,19 +104,48 @@ h3 {
 #rays {
   background-image: url(./assets/images/Sunshine.png);
   background-repeat: no-repeat;
-  position: absolute;  
-  top: 160px; 
-	left: 65px; 
+  position: absolute;
+  top: -150px;
+  left: -150px;
   height: 770px;
   width: 770px;
-  z-index: -100;	
-	
-	animation-name: spin; 
-	animation-duration: 200000ms;
-	animation-iteration-count: infinite; 
-	animation-timing-function: linear;
+  z-index: -1;
+
+  animation-name: spin;
+  animation-duration: 200000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .highlight1 {
+  color: var(--coral);
+  font-size: 3.3rem;
+  text-shadow: 2px 2px #181717;
+}
+
+.highlight2 {
   color: var(--greenblue);
+  font-size: 3.3rem;
+  text-shadow: 2px 2px #181717;
+}
+
+.highlight3 {
+  color: black;
+  font-size: 3.3rem;
+  /* text-shadow: 2px 2px #181717; */
+}
+
+@keyframes slide-up {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  animation: slide-up 2s ease-in;
 }

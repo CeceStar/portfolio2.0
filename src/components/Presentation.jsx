@@ -10,7 +10,7 @@ function Presentation() {
           <h1 className="intro-heading">
             <span className="highlight3">Hello!</span> My name is{" "}
             <span className="highlight1">Cecilia Hallerby</span> and I'm an
-            aspiring <span className="highlight2">Front end developer.</span>
+            aspiring <span className="highlight4">Front end developer.</span>
           </h1>
           <p className="intro-text">
             Born and raised in Stockholm, Sweden and has earlier worked in the

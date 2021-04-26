@@ -1,17 +1,15 @@
 import React from "react";
 import Portfolio from "./Portfolio";
-
+import Blog from "./Blog";
 import Presentation from "./Presentation";
-import Slider from "./Slider";
 
 function App() {
   return (
     <>
       <div className="background-frame">
         <Presentation />
-        <Slider>
-          <Portfolio />
-        </Slider>
+        {/* <Portfolio /> */}
+        <Blog />
       </div>
     </>
   );

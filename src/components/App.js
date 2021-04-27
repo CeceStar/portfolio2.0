@@ -1,5 +1,5 @@
 import React from "react";
-import Portfolio from "./Portfolio";
+// import Portfolio from "./Portfolio";
 import Blog from "./Blog";
 import Presentation from "./Presentation";
 

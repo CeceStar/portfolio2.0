@@ -10,15 +10,15 @@ const Blog = () => {
     getallPosts
       .get()
       .then((doc) => {
-        let posts = []
-        doc.docs.forEach((doc) => {
-          let post = {
+        let posts = doc.docs.map((doc) => {
+          return {
             id: doc.data().date,
             heading: doc.data().heading,
             text: doc.data().text,
           };
-          posts.unshift(post);
-        });
+        }).sort((a, b) => {
+          return b.id - a.id
+        })
         setAllPosts(posts);
       })
       .catch((error) => {
@@ -35,7 +35,7 @@ const Blog = () => {
     <div className="background-blog">
       <div className="blog-container">
         <h1 className="highlight2 center">Blog</h1>
-        {allPosts.reverse().map((post) => (
+        {allPosts.map((post) => (
           <BlogPost key={post.id} id={post.id} heading={post.heading} text={post.text} />
         ))}
       </div>

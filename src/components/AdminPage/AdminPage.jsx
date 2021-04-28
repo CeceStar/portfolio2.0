@@ -1,18 +1,22 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
-function AdminPage() {
-  let history = useHistory();
+const AdminPage = () => {
+  //   let history = useHistory();
+
+  function handleClick() {
+    console.log("I got clicked");
+  }
+
+  console.log("Admin page loaded");
   return (
-    <>
-      <div className="background-admin">
-        <h1>Admin Page</h1>
-        <button className="btn" onClick={() => history.goBack()}>
-          Go back
-        </button>
-      </div>
-    </>
+    <div className="background-admin">
+      <h1>Admin Page</h1>
+      <button className="btn" onClick={handleClick}>
+        Go back
+      </button>
+    </div>
   );
-}
+};
 
 export default AdminPage;

@@ -1,20 +1,17 @@
 import React from "react";
-// import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AdminPage = () => {
-  //   let history = useHistory();
 
-  function handleClick() {
-    console.log("I got clicked");
-  }
-
-  console.log("Admin page loaded");
   return (
     <div className="background-admin">
+      <div>
       <h1>Admin Page</h1>
-      <button className="btn" onClick={handleClick}>
-        Go back
-      </button>
+      </div>
+
+      <Link to="/">
+        <button className="btn admin-btn">Go back</button>
+      </Link>
     </div>
   );
 };

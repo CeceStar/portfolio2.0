@@ -8,10 +8,8 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={MainPage}>
-          {/* <MainPage /> */}
         </Route>
         <Route path="/admin" component={AdminPage}>
-          {/* <AdminPage /> */}
         </Route>
       </Switch>
     </Router>

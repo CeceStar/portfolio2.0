@@ -7,7 +7,7 @@ const EditorMenu = () => {
             <li>Add a new Post</li>
             <li>Edit a Post</li>
             <ul> {postArray.map((heading) => {
-                return <li>{heading}</li>
+                return <li key={heading}>{heading}</li>
             })}
                 
             </ul>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import BlogPost from "./BlogPost";
 import dataBase from "../../assets/data/firebase.config";
 
@@ -10,15 +11,17 @@ const Blog = () => {
     getallPosts
       .get()
       .then((doc) => {
-        let posts = doc.docs.map((doc) => {
-          return {
-            id: doc.data().date,
-            heading: doc.data().heading,
-            text: doc.data().text,
-          };
-        }).sort((a, b) => {
-          return b.id - a.id
-        })
+        let posts = doc.docs
+          .map((doc) => {
+            return {
+              id: doc.data().date,
+              heading: doc.data().heading,
+              text: doc.data().text,
+            };
+          })
+          .sort((a, b) => {
+            return b.id - a.id;
+          });
         setAllPosts(posts);
       })
       .catch((error) => {
@@ -26,20 +29,26 @@ const Blog = () => {
       });
   }
 
-    useEffect(() => {
-      fetchBlogs();
-    }, []);
-
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
   return (
     <div className="background-blog">
       <div className="blog-container">
         <h1 className="highlight2 center">Blog</h1>
         {allPosts.map((post) => (
-          <BlogPost key={post.id} id={post.id} heading={post.heading} text={post.text} />
+          <BlogPost
+            key={post.id}
+            id={post.id}
+            heading={post.heading}
+            text={post.text}
+          />
         ))}
       </div>
-      <button className="btn admin-btn">Go to admin</button>
+      <Link to="/admin">
+        <button className="btn admin-btn">Go to admin</button>
+      </Link>
     </div>
   );
 };

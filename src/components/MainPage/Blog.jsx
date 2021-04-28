@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BlogPost from "./BlogPost";
-import dataBase from "../assets/data/firebase.config";
+import dataBase from "../../assets/data/firebase.config";
 
 const Blog = () => {
   let [allPosts, setAllPosts] = useState([]);

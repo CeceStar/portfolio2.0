@@ -1,5 +1,5 @@
 import React from "react";
-import PicOfMe from "../assets/images/cece-sun-square-nogloria.png";
+import PicOfMe from "../../assets/images/cece-sun-square-nogloria.png";
 
 function Sun() {
   return (

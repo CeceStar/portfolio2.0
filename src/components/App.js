@@ -1,16 +1,12 @@
 import React from "react";
-// import Portfolio from "./Portfolio";
-import Blog from "./Blog";
-import Presentation from "./Presentation";
+import AdminPage from "./AdminPage/AdminPage";
+import MainPage from "./MainPage/MainPage";
 
 function App() {
   return (
     <>
-      <div className="background-frame">
-        <Presentation />
-        {/* <Portfolio /> */}
-        <Blog />
-      </div>
+      <MainPage />
+      <AdminPage />
     </>
   );
 }

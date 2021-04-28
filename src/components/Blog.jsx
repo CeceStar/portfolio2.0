@@ -39,6 +39,7 @@ const Blog = () => {
           <BlogPost key={post.id} id={post.id} heading={post.heading} text={post.text} />
         ))}
       </div>
+      <button className="btn admin-btn">Go to admin</button>
     </div>
   );
 };

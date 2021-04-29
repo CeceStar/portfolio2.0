@@ -38,7 +38,7 @@ const EditPost = ({
 
   return (
     <div className="center">
-      <h2>Edit article</h2>
+      <h2>Edit a Blogpost</h2>
       <form>
         <label htmlFor="Heading">Heading:</label>
         <br />

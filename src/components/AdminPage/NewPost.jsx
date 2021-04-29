@@ -26,7 +26,7 @@ const NewPost = () => {
   }
   return (
     <div className="center">
-      <h2>Add a new article</h2>
+      <h2>Add a new blogpost</h2>
       <form>
         <label htmlFor="Heading">Heading:</label>
         <br />

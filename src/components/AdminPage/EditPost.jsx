@@ -8,14 +8,12 @@ const EditPost = ({
   editText,
   setEditText,
 }) => {
-  
-
   function editBlog(event) {
     event.preventDefault();
 
     let date = new Date();
     let something = {
-      date: clickedPostId,
+      id: clickedPostId,
       heading: editHeading,
       text: editText,
       edited: date,

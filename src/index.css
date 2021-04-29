@@ -224,9 +224,8 @@ h3 {
 }
 
 .admin-page-box {
-  margin-top: 10vh;
+  margin: 10vh;
   text-align: center;
-  border: 1px black solid;
   display: grid;
   grid-template-columns: 25% 1fr;
   grid-template-rows: 100px 1fr 30px;

@@ -212,7 +212,11 @@ h3 {
 /*------------------------ ADMIN PAGE------------------------------ */
 .background-admin {
   position: relative;
-  background-image: linear-gradient(-45deg, var(--linnen), var(--yellow-transparent));
+  background-image: linear-gradient(
+    -45deg,
+    var(--linnen),
+    var(--yellow-transparent)
+  );
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
@@ -270,10 +274,34 @@ h3 {
   padding-left: 20px;
 }
 
-.menu-div ul ul {
-  padding-left: 10px;
+.menu-div ul {
+  list-style-type: none;
+  border: none;
+  background-color: transparent;
+  font-family: var(--regular-text);
 }
 
-.menu-div:hover {
-  color: var(--coral);
+.menu-div li:hover {
+  border: none;
+  background-color: transparent;
+  font-family: var(--regular-text);
+  font-weight: 700;
+}
+
+.menu-div ul ul {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.blog-headings-menu {
+  border: none;
+  background-color: transparent;
+  font-family: var(--regular-text);
+}
+
+.blog-headings-menu:hover {
+  border: none;
+  background-color: transparent;
+  font-family: var(--regular-text);
+  font-weight: 700;
 }

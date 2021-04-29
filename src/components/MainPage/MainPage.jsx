@@ -2,12 +2,12 @@ import React from "react";
 import Blog from "./Blog";
 import Presentation from "./Presentation";
 
-function MainPage() {
+function MainPage({allPosts}) {
   return (
     <>
       <div className="background-frame">
         <Presentation />
-        <Blog />
+        <Blog allPosts={allPosts}/>
       </div>
     </>
   );

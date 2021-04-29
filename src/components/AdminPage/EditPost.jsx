@@ -1,26 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 // import dataBase from "../../assets/data/firebase.config";
 
-const EditPost = ({ allPosts }) => {
-  const [heading, setHeading] = useState("");
-  const [text, setText] = useState("");
+const EditPost = ({
+  clickedPostId,
+  editHeading,
+  setEditHeading,
+  editText,
+  setEditText,
+}) => {
+  
 
-  // function postBlog(event) {
-  //   event.preventDefault();
-  //   let date = new Date();
-  //   dataBase.collection("posts").add({
-  //       date: date,
-  //       heading: heading,
-  //       text: text,
-  //       edited: date
-  //     })
-  //     .then((docRef) => {
-  //       console.log("Document written with ID: ", docRef.id);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error adding document: ", error);
-  //     });
-  // }
+  function editBlog(event) {
+    event.preventDefault();
+
+    let date = new Date();
+    let something = {
+      date: clickedPostId,
+      heading: editHeading,
+      text: editText,
+      edited: date,
+    };
+    console.log(something);
+    // let date = new Date();
+    // dataBase.collection("posts").add({
+    //     date: date,
+    //     heading: heading,
+    //     text: text,
+    //     edited: date
+    //   })
+    //   .then((docRef) => {
+    //     console.log("Document written with ID: ", docRef.id);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error adding document: ", error);
+    //   });
+  }
 
   return (
     <div className="center">
@@ -33,8 +47,8 @@ const EditPost = ({ allPosts }) => {
           id="Heading"
           name="Heading"
           minLength="5"
-          value={heading}
-          onChange={(e) => setHeading(e.target.value)}
+          value={editHeading}
+          onChange={(e) => setEditHeading(e.target.value)}
           required
         />
         <br />
@@ -46,8 +60,8 @@ const EditPost = ({ allPosts }) => {
           name="Text"
           form="formPost"
           required
-          value={text}
-          onChange={(e) => setText(e.target.value)}
+          value={editText}
+          onChange={(e) => setEditText(e.target.value)}
         />
         <br />
         <br />
@@ -56,7 +70,7 @@ const EditPost = ({ allPosts }) => {
           value="Submit"
           id="submit"
           className="btn"
-          //   onClick={postBlog}
+          onClick={editBlog}
         />
       </form>
     </div>

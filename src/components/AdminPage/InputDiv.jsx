@@ -5,7 +5,17 @@ import EditPost from "./EditPost";
 const InputDiv = (props) => {
   return (
     <div className="input-div">
-      {props.newPost ? <NewPost /> : <EditPost allPosts={props.allPosts} />}
+      {props.isNewPost ? (
+        <NewPost />
+      ) : (
+        <EditPost
+          clickedPostId={props.clickedPostId}
+          editHeading={props.editHeading}
+          setEditHeading={props.setEditHeading}
+          editText={props.editText}
+          setEditText={props.setEditText}
+        />
+      )}
     </div>
   );
 };

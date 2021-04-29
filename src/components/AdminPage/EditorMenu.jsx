@@ -1,12 +1,22 @@
 import React from "react";
 
-const EditorMenu = ({ allPosts }) => {
+const EditorMenu = ({ allPosts, setClickedPostId, setEditHeading, setEditText }) => {
   let postsHeadings = allPosts.map((doc) => {
     return {
       id: doc.id,
       heading: doc.heading,
     };
   });
+
+  function handleClick(event) {
+    let IDofPost = event.target.id;
+    let dataToEdit = allPosts.find(function (item) {
+      return item.id === IDofPost;
+    });
+    setClickedPostId(dataToEdit.id);
+    setEditHeading(dataToEdit.heading)
+    setEditText(dataToEdit.text)
+  }
 
   return (
     <div className="menu-div">
@@ -18,7 +28,10 @@ const EditorMenu = ({ allPosts }) => {
           {postsHeadings.map((post) => {
             return (
               <li key={post.id}>
-                <button className="blog-headings-menu" id={post.id}>
+                <button
+                  className="blog-headings-menu"
+                  id={post.id}
+                  onClick={handleClick}>
                   {post.heading}
                 </button>
               </li>

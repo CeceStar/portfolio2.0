@@ -9,7 +9,7 @@ const Editor = ({ allPosts }) => {
       <div className="admin-top">
         <h1>Welcome to Admin Page</h1>
       </div>
-      <EditorMenu allPosts={allPosts}/>
+      <EditorMenu allPosts={allPosts} />
       <InputDiv isNewPost={isNewPost} allPosts={allPosts} />
     </div>
   );

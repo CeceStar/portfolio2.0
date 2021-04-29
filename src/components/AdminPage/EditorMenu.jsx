@@ -18,7 +18,9 @@ const EditorMenu = ({ allPosts }) => {
           {postsHeadings.map((post) => {
             return (
               <li key={post.id}>
-                <button className="blog-headings-menu" id={post.id}>{post.heading}</button>
+                <button className="blog-headings-menu" id={post.id}>
+                  {post.heading}
+                </button>
               </li>
             );
           })}

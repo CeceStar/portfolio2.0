@@ -159,6 +159,10 @@ h3 {
   grid-area: 3 / 1 / 4 / 2;
   text-align: center;
 }
+
+.hidden {
+  display: none;
+}
 .pun-button {
   padding: 10px 20px;
   font-family: var(--headings);
@@ -168,11 +172,34 @@ h3 {
   position: relative;
   z-index: 2;
 }
-.pun-background {
+.pun-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--coral);
+  z-index: 5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pun-container button {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-family: var(--regular-text);
+  border: 1px solid black;
+  background-color: var(--pink);
   position: relative;
-  background-color:var(--coral);
   z-index: 2;
 }
+
+.pun-setup {
+  padding: 10px;
+}
+.pun-punchline {
+  padding: 10px;
+}
+
 /* @keyframes slide-up {
   from {
     top: 100%;

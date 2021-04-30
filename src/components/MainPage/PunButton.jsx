@@ -4,14 +4,18 @@ import PunPopUp from "./PunPopUp";
 const PunButton = () => {
   const [showPunPopUp, setShowPunPopUp] = useState(false);
   const [pun, setPun] = useState("");
+
   function getPun() {
-    console.log("I got clicked");
     fetch(
-      "https://us-central1-dadsofunny.cloudfunctions.net/DadJokes/random/jokes"
+      "https://us-central1-dadsofunny.cloudfunctions.net/DadJokes/random/type/programming/"
     )
       .then((response) => response.json())
-      .then((data) => setPun(data));
+      .then((data) => {
+        let [pun] = data
+        setPun(pun);
+      });
   }
+
   return (
     <div className="pun-button-div">
       <button
@@ -22,7 +26,11 @@ const PunButton = () => {
         }}>
         Have your heard this?
       </button>
-      <PunPopUp showPunPopUp={showPunPopUp} setShowPunPopUp={setShowPunPopUp} pun={pun} />
+      <PunPopUp
+        showPunPopUp={showPunPopUp}
+        setShowPunPopUp={setShowPunPopUp}
+        pun={pun}
+      />
     </div>
   );
 };

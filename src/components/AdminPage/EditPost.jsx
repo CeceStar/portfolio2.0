@@ -1,30 +1,40 @@
-import React, { useState } from "react";
-// import dataBase from "../../assets/data/firebase.config";
+import React from "react";
+import dataBase from "../../assets/data/firebase.config";
+import DeleteButton from "./DeleteButton";
 
-const EditPost = ({ allPosts }) => {
-  const [heading, setHeading] = useState("");
-  const [text, setText] = useState("");
+const EditPost = ({
+  clickedPostId,
+  editHeading,
+  setEditHeading,
+  editText,
+  setEditText,
+}) => {
+  function editBlog(event) {
+    event.preventDefault();
 
-  // function postBlog(event) {
-  //   event.preventDefault();
-  //   let date = new Date();
-  //   dataBase.collection("posts").add({
-  //       date: date,
-  //       heading: heading,
-  //       text: text,
-  //       edited: date
-  //     })
-  //     .then((docRef) => {
-  //       console.log("Document written with ID: ", docRef.id);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error adding document: ", error);
-  //     });
-  // }
+    let date = new Date();
+
+    dataBase
+      .collection("posts")
+      .doc(clickedPostId)
+      .update({
+        heading: editHeading,
+        text: editText,
+        edited: date,
+      })
+      .then(() => {
+        console.log("Document uppdated with ID: ", clickedPostId);
+        alert("Your post have been updated!");
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Error uppdating document: ", error);
+      });
+  }
 
   return (
     <div className="center">
-      <h2>Edit article</h2>
+      <h2>Edit a Blogpost</h2>
       <form>
         <label htmlFor="Heading">Heading:</label>
         <br />
@@ -33,8 +43,8 @@ const EditPost = ({ allPosts }) => {
           id="Heading"
           name="Heading"
           minLength="5"
-          value={heading}
-          onChange={(e) => setHeading(e.target.value)}
+          value={editHeading}
+          onChange={(e) => setEditHeading(e.target.value)}
           required
         />
         <br />
@@ -46,19 +56,22 @@ const EditPost = ({ allPosts }) => {
           name="Text"
           form="formPost"
           required
-          value={text}
-          onChange={(e) => setText(e.target.value)}
+          value={editText}
+          onChange={(e) => setEditText(e.target.value)}
         />
         <br />
         <br />
+      </form>
+      <div>
         <input
           type="submit"
           value="Submit"
-          id="submit"
+          id="submit-edit"
           className="btn"
-          //   onClick={postBlog}
-        />
-      </form>
+          onClick={editBlog}
+        />{" "}
+      <DeleteButton clickedPostId={clickedPostId} />
+      </div>
     </div>
   );
 };

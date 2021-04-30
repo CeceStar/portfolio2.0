@@ -19,6 +19,8 @@ const NewPost = () => {
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
+        alert("Your post has been added!")
+        window.location.reload();
       })
       .catch((error) => {
         console.error("Error adding document: ", error);
@@ -26,7 +28,7 @@ const NewPost = () => {
   }
   return (
     <div className="center">
-      <h2>Add a new article</h2>
+      <h2>Add a new blogpost</h2>
       <form>
         <label htmlFor="Heading">Heading:</label>
         <br />

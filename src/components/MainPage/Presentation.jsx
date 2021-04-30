@@ -1,4 +1,5 @@
 import React from "react";
+import PunButton from "./PunButton";
 import Sun from "./Sun";
 
 function Presentation() {
@@ -23,6 +24,7 @@ function Presentation() {
             me in your company! I'm eager to learn and good at seeking
             information online.
           </p>
+          <PunButton />
         </div>
       </div>
     </>

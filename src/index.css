@@ -37,8 +37,8 @@ h3 {
 .background-front {
   background-image: linear-gradient(
     -45deg,
-    var(--linnen),
-    var(--greenblue-transparent)
+    var(--greenblue-transparent),
+    var(--linnen)
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +59,7 @@ h3 {
 }
 .background-blog {
   position: relative;
-  background-image: linear-gradient(-45deg, var(--linnen), var(--yellow));
+  background-image: linear-gradient(-45deg, var(--yellow), var(--linnen));
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -100;
@@ -70,7 +70,7 @@ h3 {
 
 .intro-grid {
   display: grid;
-  grid-template-rows: minmax(10vh, 20vh) minmax(30vh, 50vh);
+  grid-template-rows: minmax(10vh, 20vh) minmax(20vh, 50vh) minmax(5vh, 10vh);
   grid-template-columns: 500px minmax(400px, 750px);
   padding-top: 25vh;
   width: 80vw;
@@ -155,8 +155,52 @@ h3 {
   font-size: 3.3rem;
   text-shadow: 2px 2px #181717;
 }
+.pun-button-div {
+  grid-area: 3 / 1 / 4 / 2;
+  text-align: center;
+}
 
-@keyframes slide-up {
+.hidden {
+  display: none;
+}
+.pun-button {
+  padding: 10px 20px;
+  font-family: var(--headings);
+  font-size: 1.5rem;
+  border: 3px outset var(--coral);
+  background-color: var(--coral);
+  position: relative;
+  z-index: 2;
+}
+.pun-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--coral);
+  z-index: 5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pun-container button {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-family: var(--regular-text);
+  border: 1px solid black;
+  background-color: var(--pink);
+  position: relative;
+  z-index: 2;
+}
+
+.pun-setup {
+  padding: 10px;
+}
+.pun-punchline {
+  padding: 10px;
+}
+
+/* @keyframes slide-up {
   from {
     top: 100%;
   }
@@ -169,7 +213,7 @@ h3 {
   position: absolute;
   top: 0;
   animation: slide-up 2s ease-in;
-}
+} */
 
 .blog-container {
   padding-top: 20vh;
@@ -224,11 +268,10 @@ h3 {
 }
 
 .admin-page-box {
-  margin-top: 10vh;
+  margin: 10vh;
   text-align: center;
-  border: 1px black solid;
   display: grid;
-  grid-template-columns: 25% 1fr;
+  grid-template-columns: 35% 1fr;
   grid-template-rows: 100px 1fr 30px;
   grid-template-areas:
     "header header"
@@ -266,12 +309,19 @@ h3 {
   background-color: var(--greenblue);
 }
 
+.delete-btn {
+  border: 2px solid rgb(231, 103, 103);
+}
+
+.delete-btn:hover {
+  background-color: rgb(231, 103, 103);
+}
 /* -------------- Left menu styling -----------*/
 
 .menu-div {
   grid-area: menu;
   text-align: left;
-  padding-left: 20px;
+  line-height: 1.5;
 }
 
 .menu-div ul {
@@ -281,10 +331,14 @@ h3 {
   font-family: var(--regular-text);
 }
 
-.menu-div li:hover {
+.menu-div button {
   border: none;
   background-color: transparent;
   font-family: var(--regular-text);
+  font-size: 1rem;
+}
+
+.menu-div button:hover {
   font-weight: 700;
 }
 

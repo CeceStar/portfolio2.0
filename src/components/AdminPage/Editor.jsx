@@ -3,7 +3,7 @@ import EditorMenu from "./EditorMenu";
 import InputDiv from "./InputDiv";
 
 const Editor = ({ allPosts }) => {
-  let isNewPost = false;
+  let [isNewPost, setIsNewPost] = useState(true);
 
   const [clickedPostId, setClickedPostId] = useState("");
   const [editHeading, setEditHeading] = useState("");
@@ -16,6 +16,7 @@ const Editor = ({ allPosts }) => {
       </div>
       <EditorMenu
         allPosts={allPosts}
+        setIsNewPost={setIsNewPost}
         setClickedPostId={setClickedPostId}
         setEditHeading={setEditHeading}
         setEditText={setEditText}

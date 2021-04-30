@@ -1,6 +1,6 @@
 import React from "react";
 
-const EditorMenu = ({ allPosts, setClickedPostId, setEditHeading, setEditText }) => {
+const EditorMenu = ({ allPosts, setClickedPostId, setEditHeading, setEditText, setIsNewPost }) => {
   let postsHeadings = allPosts.map((doc) => {
     return {
       id: doc.id,
@@ -16,13 +16,15 @@ const EditorMenu = ({ allPosts, setClickedPostId, setEditHeading, setEditText })
     setClickedPostId(dataToEdit.id);
     setEditHeading(dataToEdit.heading)
     setEditText(dataToEdit.text)
+    setIsNewPost(false)
   }
 
   return (
     <div className="menu-div">
       <ul>
-        <li>Add a new Post</li>
-        <li>Edit a Post</li>
+        <button onClick={() => setIsNewPost(true)}><li>Add a new Post</li></button>
+        <br />
+        <button><li>Edit a Post</li></button>
         <ul>
           {" "}
           {postsHeadings.map((post) => {

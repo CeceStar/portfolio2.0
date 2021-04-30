@@ -1,5 +1,6 @@
 import React from "react";
-// import dataBase from "../../assets/data/firebase.config";
+import dataBase from "../../assets/data/firebase.config";
+import DeleteButton from "./DeleteButton";
 
 const EditPost = ({
   clickedPostId,
@@ -12,26 +13,23 @@ const EditPost = ({
     event.preventDefault();
 
     let date = new Date();
-    let something = {
-      id: clickedPostId,
-      heading: editHeading,
-      text: editText,
-      edited: date,
-    };
-    console.log(something);
-    // let date = new Date();
-    // dataBase.collection("posts").add({
-    //     date: date,
-    //     heading: heading,
-    //     text: text,
-    //     edited: date
-    //   })
-    //   .then((docRef) => {
-    //     console.log("Document written with ID: ", docRef.id);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error adding document: ", error);
-    //   });
+
+    dataBase
+      .collection("posts")
+      .doc(clickedPostId)
+      .update({
+        heading: editHeading,
+        text: editText,
+        edited: date,
+      })
+      .then(() => {
+        console.log("Document uppdated with ID: ", clickedPostId);
+        alert("Your post have been updated!");
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Error uppdating document: ", error);
+      });
   }
 
   return (
@@ -63,14 +61,17 @@ const EditPost = ({
         />
         <br />
         <br />
+      </form>
+      <div>
         <input
           type="submit"
           value="Submit"
-          id="submit"
+          id="submit-edit"
           className="btn"
           onClick={editBlog}
-        />
-      </form>
+        />{" "}
+      <DeleteButton clickedPostId={clickedPostId} />
+      </div>
     </div>
   );
 };

@@ -19,6 +19,8 @@ const NewPost = () => {
       })
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
+        alert("Your post has been added!")
+        window.location.reload();
       })
       .catch((error) => {
         console.error("Error adding document: ", error);

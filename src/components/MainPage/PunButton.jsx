@@ -7,12 +7,11 @@ const PunButton = () => {
 
   function getPun() {
     fetch(
-      "https://us-central1-dadsofunny.cloudfunctions.net/DadJokes/random/type/programming/"
+      "https://us-central1-dadsofunny.cloudfunctions.net/DadJokes/random/jokes/"
     )
       .then((response) => response.json())
       .then((data) => {
-        let [pun] = data
-        setPun(pun);
+        setPun(data);
       });
   }
 

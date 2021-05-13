@@ -6,7 +6,7 @@ const Blog = ({ allPosts }) => {
   return (
     <div className="background-blog">
       <div className="blog-container">
-        <h1 className="highlight2 center">Blog</h1>
+        <h1 className="highlight2 center-text">Blog</h1>
         {allPosts.map((post) => (
           <BlogPost
             key={post.id}

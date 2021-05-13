@@ -1,0 +1,9 @@
+@mixin linear-background($top-color, $bottom-color) {
+  position: relative;
+  background-image: linear-gradient(-45deg, $top-color, $bottom-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border: 20px solid white;
+  width: 100%;
+}

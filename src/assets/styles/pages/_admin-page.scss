@@ -1,0 +1,111 @@
+.background-admin {
+  @include linear-background($yellow-transparent, $linnen);
+}
+
+.admin-page-box {
+  margin: 20px;
+  text-align: center;
+}
+
+.admin-top {
+  grid-area: header;
+  padding: 20px;
+  align-self: center;
+}
+
+// -------------- Left menu styling -------------
+.menu-div {
+  grid-area: menu;
+  text-align: left;
+  line-height: 1.5;
+  padding-bottom: 20px;
+  ul {
+    list-style-type: none;
+    border: none;
+    background-color: transparent;
+    font-family: $regular-text;
+    ul {
+      padding-left: 10px;
+      list-style-type: none;
+    }
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    font-family: $regular-text;
+    font-size: 1rem;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.blog-headings-menu {
+  border: none;
+  background-color: transparent;
+  font-family: $regular-text;
+  &:hover {
+    border: none;
+    background-color: transparent;
+    font-family: $regular-text;
+    font-weight: 700;
+  }
+}
+
+// --------------Input fields styling -----------
+
+#Heading {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0px;
+  font-family: $regular-text;
+}
+
+#Text {
+  width: 100%;
+  height: 300px;
+  margin: 10px 0px;
+  font-family: $regular-text;
+  font-size: 0.9rem;
+}
+
+#submit:hover {
+  background-color: $greenblue;
+}
+
+@media screen and (min-width: 1150px) {
+  .background-admin {
+    height: 100vh;
+  }
+
+  .admin-page-box {
+    margin: 10vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: 100px 1fr 30px;
+    grid-template-areas:
+      "header header"
+      "menu input"
+      "footer footer";
+  }
+
+  .input-div {
+    grid-area: input;
+  }
+
+  #Heading {
+    width: 70%;
+    height: 30px;
+    margin: 10px;
+    font-family: $regular-text;
+  }
+
+  #Text {
+    width: 70%;
+    height: 300px;
+    margin: 10px;
+    font-family: $regular-text;
+    font-size: 0.9rem;
+  }
+}

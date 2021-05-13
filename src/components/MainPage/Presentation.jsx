@@ -7,12 +7,12 @@ function Presentation() {
     <>
       <div className="background-front">
         <div className="intro-grid">
-          <Sun />
           <h1 className="intro-heading">
             <span className="highlight3">Hello!</span> My name is{" "}
             <span className="highlight1">Cecilia Hallerby</span> and I'm an
             aspiring <span className="highlight4">Front end developer.</span>
           </h1>
+          <Sun />
           <p className="intro-text">
             Born and raised in Stockholm, Sweden and has earlier worked in the
             hotel industry as both Front desk manager but also as system

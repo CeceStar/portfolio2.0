@@ -1,0 +1,27 @@
+.btn {
+  padding: 8px 10px;
+  font-family: $regular-text;
+  font-weight: 400;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn:hover {
+  padding: 8px 9px;
+  font-family: $regular-text;
+  font-weight: 700;
+  background-color: $yellow;
+  color: black;
+  border: 2px solid black;
+}
+
+// ---------Admin page specifics ----------
+
+.delete-btn {
+  border: 2px solid rgb(231, 103, 103);
+}
+
+.delete-btn:hover {
+  background-color: rgb(231, 103, 103);
+}

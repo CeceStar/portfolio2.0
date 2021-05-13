@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import BlogPost from "./BlogPost";
 
 const Blog = ({ allPosts }) => {
@@ -16,9 +16,9 @@ const Blog = ({ allPosts }) => {
           />
         ))}
       </div>
-      <Link to="/admin">
+      {/* <Link to="/admin">
         <button className="btn admin-btn">Go to admin</button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

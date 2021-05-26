@@ -8,6 +8,7 @@ Created in React and have implementet Sass to structure my CSS. It's hosted on F
 Have a look at it here :D 
 https://cecilia-hallerby.web.app/
 
+![Pic of how it looks like](./src/assets/images/picOfProjectForReadMe.png)
 
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).

@@ -15,7 +15,7 @@ const PunPopUp = ({ showPunPopUp, setShowPunPopUp, pun }) => {
           setShowAnswer(false);
           setShowPunPopUp(false);
         }}>
-        {showAnswer ? "Omg lame" : "Please no"}
+        {showAnswer ? "Haha, Love it!" : "No, don't tell me"}
       </button>
     </div>
   );

@@ -16,6 +16,16 @@
   border: 2px solid black;
 }
 
+@mixin large-buttons($bgcolor, $bordercolor) {
+  padding: 10px 20px;
+  font-family: $headings;
+  font-size: 1.4rem;
+  border: 3px outset $bordercolor;
+  background-color: $bgcolor;
+  position: relative;
+  z-index: 2;
+}
+
 // ---------Admin page specifics ----------
 
 .delete-btn {

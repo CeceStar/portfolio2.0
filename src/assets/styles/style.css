@@ -145,7 +145,6 @@ h3 {
   background-image: linear-gradient(-45deg, #84a59db2, #f7ede2);
   background-repeat: no-repeat;
   background-size: cover;
-  border: 20px solid white;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -223,8 +222,11 @@ h3 {
 .intro-text {
   position: relative;
   font-size: 1.3rem;
-  margin: 0px 10% 10% 10%;
+  margin: 0px 10px 10px 10px;
   z-index: 2;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 @media screen and (min-width: 1150px) {
@@ -234,13 +236,12 @@ h3 {
   .intro-grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: minmax(10vh, 20vh) minmax(20vh, 50vh) minmax(5vh, 10vh);
-        grid-template-rows: minmax(10vh, 20vh) minmax(20vh, 50vh) minmax(5vh, 10vh);
+    -ms-grid-rows: minmax(100px, 150px) auto 70px;
+        grid-template-rows: minmax(100px, 150px) auto 70px;
     -ms-grid-columns: 500px minmax(400px, 750px);
         grid-template-columns: 500px minmax(400px, 750px);
     padding-top: 25vh;
     width: 80vw;
-    height: 80vh;
     margin: 0 auto;
   }
   .intro-heading {
@@ -317,23 +318,24 @@ h3 {
 }
 
 .pun-button-div {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 3 / 1 / 4 / 2;
-  text-align: center;
-  margin: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
 }
 
 .pun-button {
   padding: 10px 20px;
   font-family: "Glass Antiqua", cursive;
-  font-size: 1.5rem;
-  border: 3px outset #f28482;
-  background-color: #f28482;
+  font-size: 1.4rem;
+  border: 3px outset black;
+  background-color: #84a59d00;
   position: relative;
   z-index: 2;
+  margin-left: 10px;
 }
 
 .pun-container {
@@ -371,7 +373,40 @@ h3 {
 @media screen and (min-width: 1150px) {
   .pun-container {
     width: 350px;
+    text-align: center;
   }
+  .pun-button-div {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 3 / 2 / 4 / 3;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 20px;
+    margin: 20px 0px 0px 0px;
+  }
+}
+
+.CV-button {
+  padding: 10px 20px;
+  font-family: "Glass Antiqua", cursive;
+  font-size: 1.4rem;
+  border: 3px outset #f28482;
+  background-color: #f28482;
+  position: relative;
+  z-index: 2;
+  margin-right: 10px;
+}
+
+.CV-button a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .background-blog {
@@ -379,7 +414,6 @@ h3 {
   background-image: linear-gradient(-45deg, #f6bd60, #f7ede2);
   background-repeat: no-repeat;
   background-size: cover;
-  border: 20px solid white;
   width: 100%;
   height: 100%;
 }
@@ -416,7 +450,6 @@ h3 {
   background-image: linear-gradient(-45deg, #f6bd60bb, #f7ede2);
   background-repeat: no-repeat;
   background-size: cover;
-  border: 20px solid white;
   width: 100%;
   height: 100%;
 }
@@ -501,7 +534,8 @@ h3 {
     height: 100vh;
   }
   .admin-page-box {
-    margin: 10vh;
+    margin: 0vh;
+    padding: 10vh;
     text-align: center;
     display: -ms-grid;
     display: grid;

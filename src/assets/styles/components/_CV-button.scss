@@ -1,0 +1,8 @@
+.CV-button {
+  @include large-buttons($coral, $coral);
+  margin-right: 10px;
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}

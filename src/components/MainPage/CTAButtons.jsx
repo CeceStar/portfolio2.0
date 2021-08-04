@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import CVButton from "./CVButton";
 import PunPopUp from "./PunPopUp";
 
-const PunButton = () => {
+const CTAButtons = () => {
   const [showPunPopUp, setShowPunPopUp] = useState(false);
   const [pun, setPun] = useState("");
 
@@ -17,14 +18,15 @@ const PunButton = () => {
 
   return (
     <div className="pun-button-div">
+      <CVButton />
       <button
         className="pun-button"
         onClick={() => {
           getPun();
           setShowPunPopUp(true);
         }}>
-        Have your heard this?
-      </button>
+        Have your heard?
+      </button> 
       <PunPopUp
         showPunPopUp={showPunPopUp}
         setShowPunPopUp={setShowPunPopUp}
@@ -34,4 +36,4 @@ const PunButton = () => {
   );
 };
 
-export default PunButton;
+export default CTAButtons;

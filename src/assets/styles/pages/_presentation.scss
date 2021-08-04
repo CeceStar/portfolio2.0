@@ -59,8 +59,9 @@
 .intro-text {
   position: relative;
   font-size: 1.3rem;
-  margin: 0px 10% 10% 10%;
+  margin: 0px 10px 10px 10px;
   z-index: 2;
+  align-items: stretch;
 }
 
 // --------------------DESKTOP MAINPAGE------------------
@@ -72,11 +73,10 @@
 
   .intro-grid {
     display: grid;
-    grid-template-rows: minmax(10vh, 20vh) minmax(20vh, 50vh) minmax(5vh, 10vh);
+    grid-template-rows: minmax(100px, 150px) auto 70px;
     grid-template-columns: 500px minmax(400px, 750px);
     padding-top: 25vh;
     width: 80vw;
-    height: 80vh;
     margin: 0 auto;
   }
 

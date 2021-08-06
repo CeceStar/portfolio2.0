@@ -17,7 +17,7 @@ const CTAButtons = () => {
   }
 
   return (
-    <div className="pun-button-div">
+    <div className="pun-button-div animate__animated animate__fadeIn animate__delay-1s">
       <CVButton />
       <button
         className="pun-button"

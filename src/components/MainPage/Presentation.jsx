@@ -8,13 +8,13 @@ function Presentation() {
     <>
       <div className="background-front">
         <div className="intro-grid">
-          <h1 className="intro-heading">
+          <h1 className="intro-heading animate__animated animate__zoomInDown">
             <span className="highlight3">Hello!</span> My name is{" "}
             <span className="highlight1">Cecilia Hallerby</span> and I'm a
             <span className="highlight4"> Front end developer.</span>
           </h1>
           <Sun />
-          <p className="intro-text">
+          <p className="intro-text animate__animated animate__fadeIn animate__delay-1s">
             Born and raised in Stockholm, Sweden and has earlier worked in the
             hotel industry as both Front desk manager but also as system
             responsible for the booking system within the hotel chain. I have

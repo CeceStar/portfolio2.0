@@ -17,23 +17,3 @@
   width: 100%;
   height: 100%;
 }
-
-@mixin solid-background($bgcolor) {
-  position: relative;
-  background-color: $bgcolor;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  width: 100%;
-  height: 100%;
-}
-
-// @mixin large-buttons($color) {
-//     padding: 10px 20px;
-//     font-family: $headings;
-//     font-size: 1.5rem;
-//     border: 3px outset $color;
-//     background-color: $color;
-//     position: relative;
-//     z-index: 2;
-// }

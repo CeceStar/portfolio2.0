@@ -1,6 +1,7 @@
 import React from "react";
 import CTAButtons from "./CTAButtons";
 import Sun from "./Sun";
+import PageBreakLine from "./PageBreakLine";
 
 function Presentation() {
   return (
@@ -26,7 +27,8 @@ function Presentation() {
           </p>
           <CTAButtons />
         </div>
-      </div>
+        <PageBreakLine />
+      </div>    
     </>
   );
 }

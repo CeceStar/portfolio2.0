@@ -142,7 +142,7 @@ h3 {
 
 .background-front {
   position: relative;
-  background-image: linear-gradient(-45deg, #84a59db2, #f7ede2);
+  background-image: linear-gradient(-25deg, #84a59db2 40%, #f7ede2);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -324,14 +324,14 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 10px;
+  margin: 30px 20px 70px 20px;
 }
 
 .pun-button {
   padding: 10px 20px;
   font-family: "Glass Antiqua", cursive;
   font-size: 1.4rem;
-  border: 3px outset black;
+  border: 3px outset #8a8a8a;
   background-color: #84a59d00;
   position: relative;
   z-index: 2;
@@ -340,6 +340,7 @@ h3 {
 
 .pun-container {
   position: fixed;
+  text-align: center;
   top: 50%;
   left: 50%;
   width: 80%;
@@ -373,7 +374,6 @@ h3 {
 @media screen and (min-width: 1150px) {
   .pun-container {
     width: 350px;
-    text-align: center;
   }
   .pun-button-div {
     -ms-grid-row: 3;
@@ -409,9 +409,35 @@ h3 {
   text-decoration: inherit;
 }
 
+.page-break-line-div {
+  position: absolute;
+  z-index: 2;
+  bottom: -5px;
+  left: 0px;
+  width: 100%;
+}
+
+.blue-line {
+  fill: #a9c0bb;
+}
+
+.yellow-line {
+  fill: #f8ce8a;
+}
+
+@media screen and (min-width: 1150px) {
+  .page-break-line-div {
+    position: absolute;
+    z-index: 2;
+    bottom: -5px;
+    left: 0px;
+  }
+}
+
 .background-blog {
   position: relative;
-  background-image: linear-gradient(-45deg, #f6bd60, #f7ede2);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #f6bd60bb), to(#f7ede2));
+  background-image: linear-gradient(180deg, #f6bd60bb 40%, #f7ede2);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -440,14 +466,14 @@ h3 {
     height: 120vh;
   }
   .blog-container {
-    padding-top: 20vh;
+    padding-top: 5vh;
     width: 50vw;
   }
 }
 
 .background-admin {
   position: relative;
-  background-image: linear-gradient(-45deg, #f6bd60bb, #f7ede2);
+  background-image: linear-gradient(-25deg, #f6bd60bb 40%, #f7ede2);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

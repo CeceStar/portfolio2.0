@@ -1,6 +1,26 @@
 @mixin linear-background($top-color, $bottom-color) {
   position: relative;
-  background-image: linear-gradient(-45deg, $top-color, $bottom-color);
+  background-image: linear-gradient(-25deg, $top-color 40%, $bottom-color );
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 100%;
+}
+
+@mixin linear-straight-background($top-color, $bottom-color) {
+  position: relative;
+  background-image: linear-gradient(180deg, $top-color 40%, $bottom-color );
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 100%;
+}
+
+@mixin solid-background($bgcolor) {
+  position: relative;
+  background-color: $bgcolor;
   background-repeat: no-repeat;
   background-size: cover;
 

@@ -1,16 +1,17 @@
 .pun-button-div {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 30px 20px 70px 20px;
 }
 
 .pun-button {
-  @include large-buttons($transparent, black);
+  @include large-buttons($transparent, $grey);
   margin-left: 10px;
 }
 
 .pun-container {
   position: fixed;
+  text-align: center;
   top: 50%;
   left: 50%;
   width: 80%;
@@ -41,7 +42,6 @@
 @media screen and (min-width: 1150px) {
   .pun-container {
     width: 350px;
-    text-align: center;
   }
 
   .pun-button-div {

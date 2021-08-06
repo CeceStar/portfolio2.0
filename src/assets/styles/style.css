@@ -195,8 +195,8 @@ h3 {
   z-index: 2;
   -webkit-animation-name: spin;
           animation-name: spin;
-  -webkit-animation-duration: 200000ms;
-          animation-duration: 200000ms;
+  -webkit-animation-duration: 85000ms;
+          animation-duration: 85000ms;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;

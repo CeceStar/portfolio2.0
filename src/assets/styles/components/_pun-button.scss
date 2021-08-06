@@ -17,7 +17,7 @@
   width: 80%;
   transform: translate(-50%, -50%);
   background-color: $coral;
-  z-index: 5;
+  z-index: 100;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
@@ -28,7 +28,7 @@
     border: 1px solid black;
     background-color: $pink;
     position: relative;
-    z-index: 2;
+    // z-index: 2;
   }
 }
 

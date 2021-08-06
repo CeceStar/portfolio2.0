@@ -8,7 +8,7 @@ function Presentation() {
     <>
       <div className="background-front">
         <div className="intro-grid">
-          <h1 className="intro-heading animate__animated animate__zoomInDown">
+          <h1 className="intro-heading animate__animated animate__zoomInDown animate__slow">
             <span className="highlight3">Hello!</span> My name is{" "}
             <span className="highlight1">Cecilia Hallerby</span> and I'm a
             <span className="highlight4"> Front end developer.</span>

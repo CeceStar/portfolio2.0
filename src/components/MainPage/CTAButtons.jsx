@@ -17,7 +17,13 @@ const CTAButtons = () => {
   }
 
   return (
-    <div className="pun-button-div animate__animated animate__fadeIn animate__delay-1s">
+    <>
+    <PunPopUp
+        showPunPopUp={showPunPopUp}
+        setShowPunPopUp={setShowPunPopUp}
+        pun={pun}
+      />
+    <div className="pun-button-div animate__animated animate__fadeIn animate__delay-1s"> 
       <CVButton />
       <button
         className="pun-button"
@@ -27,12 +33,8 @@ const CTAButtons = () => {
         }}>
         Have your heard?
       </button> 
-      <PunPopUp
-        showPunPopUp={showPunPopUp}
-        setShowPunPopUp={setShowPunPopUp}
-        pun={pun}
-      />
     </div>
+    </>
   );
 };
 

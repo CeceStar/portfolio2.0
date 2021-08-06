@@ -23,10 +23,11 @@
 
 @media screen and (min-width: 1150px) {
   .background-blog {
-    height: 120vh;
+    height: 100%;
   }
   .blog-container {
     padding-top: 5vh;
     width: 50vw;
+    height: 80vh;
   }
 }

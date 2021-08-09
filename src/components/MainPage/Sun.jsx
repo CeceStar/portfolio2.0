@@ -10,7 +10,7 @@ function Sun() {
       <img
         className="cece-portrait"
         src={PicOfMe}
-        alt="A portrait of my face, that is in the sun."
+        alt="Cecilia's portrait inside a sun."
       />
     </div>
   );

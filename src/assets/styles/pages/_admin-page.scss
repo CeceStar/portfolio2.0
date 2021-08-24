@@ -1,5 +1,6 @@
 .background-admin {
   @include linear-background($yellow-transparent, $linnen);
+  cursor: auto;
 }
 
 .admin-page-box {

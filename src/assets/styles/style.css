@@ -55,6 +55,18 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f7ede2;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: radial-gradient(#f28482 40%, #f5cac3);
+}
+
 h1,
 h2,
 h3 {

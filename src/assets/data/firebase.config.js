@@ -10,9 +10,8 @@ let firebaseConfig = {
   storageBucket: "cecilia-hallerby.appspot.com",
   messagingSenderId: "416427913432",
   appId: "1:416427913432:web:bd3cf2fc8045196ca5e7ad",
-  measurementId: "G-8EZCF8907G"
+  measurementId: "G-8EZCF8907G",
 };
-
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

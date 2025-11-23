@@ -22,6 +22,7 @@ const CTAButtons = () => {
         showPunPopUp={showPunPopUp}
         setShowPunPopUp={setShowPunPopUp}
         pun={pun}
+        setPun={setPun}
       />
     <div className="pun-button-div animate__animated animate__fadeIn animate__delay-1s"> 
       <CVButton />

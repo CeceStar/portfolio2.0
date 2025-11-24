@@ -18,9 +18,9 @@ function Presentation() {
             Born and raised in Stockholm, Sweden and has earlier worked in the
             hotel industry as both Front desk manager but also as system
             responsible for the booking system within the hotel chain. I have
-            always been interested in tech, and that’s how I found more
-            information about coding. It got my attention and after some back
-            and forth, I finally applied for this Frontend developer program at
+            always been interested in tech, and recently coding really got my
+            attention, especially Front end development. After some back and
+            forth, I finally applied for this Frontend developer program at
             Hyper Island, and got in! Contact me if you are interested in having
             me in your company! I'm eager to learn and good at seeking
             information online.
@@ -28,7 +28,7 @@ function Presentation() {
           <CTAButtons />
         </div>
         <PageBreakLine />
-      </div>    
+      </div>
     </>
   );
 }
